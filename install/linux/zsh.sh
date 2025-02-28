@@ -10,8 +10,7 @@ git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerl
 
 zsh
 sed -i 's#^ZSH_THEME=.*$#ZSH_THEME="powerlevel10k/powerlevel10k"#' ~/.zshrc
-# download fonts
-wget https://github.com/romkatv/dotfiles-public/raw/master/ .local/share/fonts/NerdFonts/MesloLGS%20NF%20Regular.ttf &&
-wget https://github.com/romkatv/dotfiles-public/raw/master/ .local/share/fonts/NerdFonts/MesloLGS%20NF%20Bold.ttf &&
-wget https://github.com/romkatv/dotfiles-public/raw/master/ .local/share/fonts/NerdFonts/MesloLGS%20NF%20Italic.ttf &&
-wget https://github.com/romkatv/dotfiles-public/raw/master/ .local/share/fonts/NerdFonts/MesloLGS%20NF%20Bold%20Italic.ttf
+
+# Additional steps:
+# download fonts and set it as the terminal font
+# wget https://github.com/romkatv/dotfiles-public/raw/master/.local/share/fonts/NerdFonts/MesloLGS%20NF%20Regular.ttf &&
