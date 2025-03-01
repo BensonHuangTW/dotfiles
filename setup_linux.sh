@@ -23,13 +23,12 @@ cd "${DOTFILES_ROOT}"
 
 
 # NeoVim Settings
-stow ${NVIM_PACKAGE_NAME}
 source "${DOTFILES_ROOT}/nvim/.config/nvim/nvim_linux.sh"
 
-stow ${MAIN_PACKAGE_NAME}
+# stow ${MAIN_PACKAGE_NAME}
 
 # ZSH Settings
-source "${LINUX_INSTALL_ROOTS}/zsh.sh"
+# source "${LINUX_INSTALL_ROOTS}/zsh.sh"
 # zsh
 # sed -i 's#^ZSH_THEME=.*$#ZSH_THEME="powerlevel10k/powerlevel10k"#' ~/.zshrc
 
