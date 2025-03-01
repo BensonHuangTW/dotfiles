@@ -21,11 +21,12 @@ source "${LINUX_INSTALL_ROOTS}/python.sh"
 
 cd "${DOTFILES_ROOT}"
 
-# ZSH Settings
-source "${LINUX_INSTALL_ROOTS}/zsh.sh"
-rm "~/.zshrc"
-stow ${MAIN_PACKAGE_NAME}
 
 # NeoVim Settings
 stow ${NVIM_PACKAGE_NAME}
 source "${DOTFILES_ROOT}/nvim/.config/nvim/nvim_linux.sh"
+
+# ZSH Settings
+source "${LINUX_INSTALL_ROOTS}/zsh.sh"
+rm "~/.zshrc"
+stow ${MAIN_PACKAGE_NAME}
