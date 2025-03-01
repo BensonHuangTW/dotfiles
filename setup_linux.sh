@@ -26,7 +26,15 @@ cd "${DOTFILES_ROOT}"
 stow ${NVIM_PACKAGE_NAME}
 source "${DOTFILES_ROOT}/nvim/.config/nvim/nvim_linux.sh"
 
+stow ${MAIN_PACKAGE_NAME}
+
 # ZSH Settings
 source "${LINUX_INSTALL_ROOTS}/zsh.sh"
-rm "~/.zshrc"
-stow ${MAIN_PACKAGE_NAME}
+# zsh
+# sed -i 's#^ZSH_THEME=.*$#ZSH_THEME="powerlevel10k/powerlevel10k"#' ~/.zshrc
+
+# Additional steps:
+# download fonts and set it as the terminal font
+# wget https://github.com/romkatv/dotfiles-public/raw/master/.local/share/fonts/NerdFonts/MesloLGS%20NF%20Regular.ttf &&
+
+# rm "~/.zshrc"
