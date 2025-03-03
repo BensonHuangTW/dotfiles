@@ -5,6 +5,13 @@ return {
   {
     "lewis6991/gitsigns.nvim",
     config = function()
+      -- custom highlighting for added lines
+      vim.api.nvim_set_hl(0, 'GitSignsAdd', {fg='#009900'})
+      vim.api.nvim_set_hl(0, 'GitSignsAddPreview', {fg='#00CC00'})
+      vim.g.signify_sign_add = '┃' -- overwrite sign from + to a thin line
+      -- custom highlighting for added lines in stage
+      vim.api.nvim_set_hl(0, 'GitSignsStagedAdd', {fg='#666600'})
+
       require('gitsigns').setup{
         signs = {
           add          = { text = '┃' },
