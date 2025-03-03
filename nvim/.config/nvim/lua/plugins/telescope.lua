@@ -20,12 +20,17 @@ return {
             case_mode = "smart_case",       -- "ignore_case" | "respect_case" | "smart_case"
                                            -- The default case mode is "smart_case".
           }
+        },
+        pickers = {
+          find_files = {
+            hidden = true,
+            file_ignore_patterns = {"^.git/"}
+          }
         }
       }
 
       require("telescope").load_extension("fzf")
       local builtin = require("telescope.builtin")
-
       vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })
       vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live grep" })
       vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
