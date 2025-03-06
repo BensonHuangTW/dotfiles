@@ -6,6 +6,11 @@ return {
     config = function()
       require("oil").setup({
         default_file_explorer = true,
+        columns = {
+          "icon",
+          "permissions",
+          "mtime",
+        },
         win_options = {
           -- wrap = false,
           -- signcolumn = "no",
@@ -61,8 +66,8 @@ return {
         highlight NvimTreeCursorLine guibg=#555555
       ]])
 
-      vim.keymap.set("n", "<leader>ee", ":NvimTreeToggle<CR>", { desc = "Toggle nvim-tree." })
-      vim.keymap.set("n", "<leader>ef", ":NvimTreeFocus<CR>", { desc = "Focus on nvim-tree" })
+      vim.keymap.set("n", "<leader>ee", ":NvimTreeToggle<CR>", { desc = "Toggle nvim-tree."} )
+      vim.keymap.set("n", "<leader>ef", ":NvimTreeFocus<CR>", { desc = "Focus on nvim-tree"} )
     end
   }
 }
