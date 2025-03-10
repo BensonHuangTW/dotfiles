@@ -50,3 +50,9 @@ vim.keymap.set({ "v", "n" }, "<leader>y", '"+y', { desc = "Copy to system clipbo
 vim.keymap.set({ "v", "n" }, "<leader>p", '"+p', { desc = "Paste from system clipboard" })
 
 
+-- ========================================================================
+-- |                          New Commands                                |
+-- ========================================================================
+vim.api.nvim_create_user_command('Bd', function()
+  vim.cmd('bp|bd #')
+end, {})
