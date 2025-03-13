@@ -44,6 +44,9 @@ vim.opt.exrc = true -- enable .lua config specific to the current work directory
 -- ========================================================================
 vim.keymap.set("i", "jk", "<Esc>", {noremap = true, silent = true, desc="<Esc>"})
 vim.g.mapleader = " "
+vim.api.nvim_set_keymap('n', '<C-w>Q', 
+  [[:windo if &buftype != '' | close | endif<CR>]], 
+  {noremap = true, silent = true, desc = 'Close all window of non-regular file buffers (e.g. plugings).'})
 
 -- System Clipboard
 vim.keymap.set({ "v", "n" }, "<leader>y", '"+y', { desc = "Copy to system clipboard" })
