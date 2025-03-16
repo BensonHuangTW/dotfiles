@@ -47,14 +47,20 @@ return {
   {
     "akinsho/toggleterm.nvim",
     version = "*",
-    config = function()
-      require("toggleterm").setup()
-      vim.keymap.set({"n", "i", "t"}, "<C-j>", function()
-        require("toggleterm").toggle()
-        -- Optionally force focus
-        vim.cmd("startinsert!")
-      end, { noremap = true, desc = "Toggle terminal" })
-    end,
+    keys = {
+      {
+        -- "<leader>tt",
+        "<c-j>",
+        function()
+          require("toggleterm").toggle()
+          -- Optionally force focus
+          vim.cmd("startinsert!")
+        end,
+        desc = "Toggle terminal",
+        mode = {"n", "v", "t"},
+        noremap = true
+      }
+    }
   },
 }
 
