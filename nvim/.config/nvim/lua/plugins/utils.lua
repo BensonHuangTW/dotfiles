@@ -49,7 +49,6 @@ return {
     version = "*",
     keys = {
       {
-        -- "<leader>tt",
         "<c-j>",
         function()
           require("toggleterm").toggle()
@@ -59,6 +58,9 @@ return {
         desc = "Toggle terminal",
         mode = {"n", "v", "t"},
         noremap = true
+      },
+      {
+        "<esc>", "<c-\\><c-n>", desc = "Leave terminal mode", mode = "t", noremap = true
       }
     }
   },
