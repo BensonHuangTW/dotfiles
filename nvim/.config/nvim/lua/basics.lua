@@ -14,7 +14,6 @@ vim.opt.cursorline = true
 vim.opt.wrap = false
 vim.opt.splitright = true -- put the new window on the right (i.e. :vsplit file1.txt)
 vim.opt.splitbelow = true -- put new horizontal windows below
-vim.opt.fillchars:append { vert = "|" } -- Optional: Use a more visible vertical separator character
 vim.cmd([[highlight WinSeparator guifg=#4a4a4a]]) -- Adjust the color (#4a4a4a is a medium gray) - make the terminal window separator
 
 -- search setting
